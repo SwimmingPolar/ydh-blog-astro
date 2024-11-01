@@ -1,71 +1,55 @@
 ---
-import BaseHead from "../components/BaseHead.astro"
-import Header from "../components/Header.astro"
-import Footer from "../components/Footer.astro"
-import { SITE_TITLE, SITE_DESCRIPTION } from "../consts"
+import BaseLayout from "../layouts/BaseLayout.astro"
+const pageTitle = "Home Page"
 ---
 
-<!doctype html>
-<html lang="en">
-    <head>
-        <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-    </head>
-    <body>
-        <Header />
-        <main>
-            <h1>🧑‍🚀 Hello, Astronaut!</h1>
-            <p>
-                Welcome to the official <a href="https://astro.build/">Astro</a>
-                blog starter template. This template serves as a lightweight, minimally-styled
-                starting point for anyone looking to build a personal website, blog,
-                or portfolio with Astro.
-            </p>
-            <p>
-                This template comes with a few integrations already configured
-                in your
-                <code>astro.config.mjs</code> file. You can customize your setup
-                with
-                <a href="https://astro.build/integrations">Astro Integrations</a
-                > to add tools like Tailwind, React, or Vue to your project.
-            </p>
-            <p>Here are a few ideas on how to get started with the template:</p>
-            <ul>
-                <li>Edit this page in <code>src/pages/index.astro</code></li>
-                <li>
-                    Edit the site header items in <code
-                        >src/components/Header.astro</code
-                    >
-                </li>
-                <li>
-                    Add your name to the footer in <code
-                        >src/components/Footer.astro</code
-                    >
-                </li>
-                <li>
-                    Check out the included blog posts in <code
-                        >src/content/blog/</code
-                    >
-                </li>
-                <li>
-                    Customize the blog post page layout in <code
-                        >src/layouts/BlogPost.astro</code
-                    >
-                </li>
-            </ul>
-            <p>
-                Have fun! If you get stuck, remember to <a
-                    href="https://docs.astro.build/"
-                    >read the docs
-                </a> or <a href="https://astro.build/chat">join us on Discord</a
-                > to ask questions.
-            </p>
-            <p>
-                Looking for a blog template with a bit more personality? Check
-                out <a href="https://github.com/Charca/astro-blog-template"
-                    >astro-blog-template
-                </a> by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-            </p>
-        </main>
-        <Footer />
-    </body>
-</html>
+<BaseLayout {pageTitle}>
+    <h2>My awesome blog subtitle</h2>
+    <div
+        class="bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 p-6 rounded-xl shadow-lg max-w-xs mx-auto"
+    >
+        <h2 class="text-white text-lg font-semibold mb-4">Generators</h2>
+        <ul class="space-y-2">
+            <li>
+                <a
+                    href="/dev/generator/stripe"
+                    class="block p-2 bg-white bg-opacity-20 rounded-md hover:bg-opacity-40 transition ease-out text-white"
+                >
+                    Stripe
+                </a>
+            </li>
+            <li>
+                <a
+                    href="/dev/generator/ripped-edge"
+                    class="block p-2 bg-white bg-opacity-20 rounded-md hover:bg-opacity-40 transition ease-out text-white"
+                >
+                    Edge
+                </a>
+            </li>
+            <li>
+                <a
+                    href="/dev/generator/papercut"
+                    class="block p-2 bg-white bg-opacity-20 rounded-md hover:bg-opacity-40 transition ease-out text-white"
+                >
+                    Papercut
+                </a>
+            </li>
+            <li>
+                <a
+                    href="/dev/generator/grid-generator"
+                    class="block p-2 bg-white bg-opacity-20 rounded-md hover:bg-opacity-40 transition ease-out text-white"
+                >
+                    Grid
+                </a>
+            </li>
+            <li>
+                <a
+                    href="/dev/generator/border-generator"
+                    class="block p-2 bg-white bg-opacity-20 rounded-md hover:bg-opacity-40 transition ease-out text-white"
+                >
+                    Border
+                </a>
+            </li>
+        </ul>
+    </div>
+</BaseLayout>

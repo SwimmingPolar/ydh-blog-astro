@@ -1,0 +1,11 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro"
+import GridController from "@components/tools/GridGenerator"
+const pageTitle = "Grid Generator"
+---
+
+<BaseLayout {pageTitle}>
+    <div class="container mx-auto flex justify-center my-4">
+        <GridController client:load />
+    </div>
+</BaseLayout>

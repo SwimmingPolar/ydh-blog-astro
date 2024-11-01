@@ -1,0 +1,13 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro"
+import StripeGeneratorModule from "@components/tools/StripeGeneratorModule"
+import PaperEdge from "./PaperEdge.tsx"
+const pageTitle = "Playground"
+---
+
+<BaseLayout {pageTitle}>
+    <div class="container mx-auto">
+        <!-- <StripeGeneratorModule client:load /> -->
+        <PaperEdge client:load />
+    </div>
+</BaseLayout>

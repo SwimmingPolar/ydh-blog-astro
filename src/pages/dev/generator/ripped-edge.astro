@@ -1,0 +1,11 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro"
+import RippedPaperDemo from "@components/tools/RippedEdge"
+const pageTitle = "Paper Ripped Effect Generator"
+---
+
+<BaseLayout {pageTitle}>
+    <div class="container mx-auto flex justify-center my-4">
+        <RippedPaperDemo client:load />
+    </div>
+</BaseLayout>

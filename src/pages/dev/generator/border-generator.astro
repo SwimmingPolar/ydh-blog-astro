@@ -1,0 +1,11 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro"
+import BorderGenerator from "@components/tools/BorderGenerator"
+const pageTitle = "Border Generator"
+---
+
+<BaseLayout {pageTitle}>
+    <div class="min-h-full w-full">
+        <BorderGenerator client:load />
+    </div>
+</BaseLayout>

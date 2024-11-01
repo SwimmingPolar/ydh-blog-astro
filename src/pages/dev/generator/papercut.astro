@@ -1,0 +1,11 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro"
+import PaperRipGenerator from "@components/tools/PaperEdge"
+const pageTitle = "Papercut Generator"
+---
+
+<BaseLayout {pageTitle}>
+    <div class="container mx-auto flex justify-center my-4">
+        <PaperRipGenerator client:load />
+    </div>
+</BaseLayout>
